@@ -39,6 +39,7 @@ historyItem.innerHTML =`
 `;
 const historyContainer = document.getElementById("history-list");
 historyContainer.insertBefore(historyItem,historyContainer.firstChild);
+const m =document.getElementById("my_modal").showModal();
 });
 
 // add eventlistener for card-2
@@ -75,6 +76,7 @@ historyItem.innerHTML =`
 `;
 const historyContainer = document.getElementById("history-list");
 historyContainer.insertBefore(historyItem,historyContainer.firstChild);
+ocument.getElementById("my_modal").showModal();
 });
 
 // add Eventlistener for card 3
@@ -111,6 +113,9 @@ historyItem.innerHTML =`
 `;
 const historyContainer = document.getElementById("history-list");
 historyContainer.insertBefore(historyItem,historyContainer.firstChild);
+ocument.getElementById("my_modal").showModal();
+
+
 });
 
 // history Tab Functionality
@@ -184,24 +189,24 @@ assistantTab.addEventListener("click",function(){
 
 
 // Get the modal and close button elements
-const modal = document.getElementById("donation-modal");
-const closeModal = document.getElementById("close-modal");
+// const modal = document.getElementById("donation-modal");
+// const closeModal = document.getElementById("close-modal");
 
-// Function to show the modal
-function showModal() {
-  modal.classList.remove("hidden");
-}
+// // Function to show the modal
+// function showModal() {
+//   modal.classList.remove("hidden");
+// }
 
-// Function to hide the modal
-   closeModal.addEventListener("click", function () {
-     modal.classList.add("hidden");
-});
+// // Function to hide the modal
+//    closeModal.addEventListener("click", function () {
+//      modal.classList.add("hidden");
+// });
 
-// Add event listeners to "Donate Now" buttons to show the modal
-const donateButtons = document.querySelectorAll(".donation-form button");
+// // Add event listeners to "Donate Now" buttons to show the modal
+// const donateButtons = document.querySelectorAll(".donation-form button");
 
-donateButtons.forEach(button => {
-  button.addEventListener("click", function() {
-    showModal();
-  });
-});
+// donateButtons.forEach(button => {
+//   button.addEventListener("click", function() {
+//     showModal();
+//   });
+// });
