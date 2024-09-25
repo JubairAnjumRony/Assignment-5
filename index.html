@@ -10,73 +10,193 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
    <!-- google font-setup -->
-    
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
    <!-- tailwind config.js setup -->
-    <script>
-        module.exports = {
-    theme: {
-      extend: {
-        colors: {
-          'custom-color': '#B4F461',
-        },
-      },
-    },
-  }
-    </script>
+  
+    <style>
+        .lexend{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
 </head>
-<body >
-    <header class ="mx-auto px-6 md:px-16 lg:px-28">
+<body class="lexend " >
+    <header class =" sticky z-50 top-0  ">
        <!-- navbar section -->
-       <div class="navbar bg-base-100">
+       <div class="navbar   bg-[#F9F7F3] px-6 md:px-16 lg:px-28">
         <div class="navbar-start">
-          <button class=" btn btn-success bg-custom-color">Blog</button>
+          <button class=" btn btn-success bg-[#B4F461]">Blog</button>
         </div>
-        <div class="navbar-center">
-          <img src ="./ass"
+        <div class="navbar-center flex justify-center gap-3">
+          <img src ="./assets/logo.png">
+          <h1 class="font-black text-2xl ">Donate Bangladesh</h1>
         </div>
-        <div class="navbar-end">
-          <button class="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
-          <button class="btn btn-ghost btn-circle">
-            <div class="indicator">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-              </svg>
-              <span class="badge badge-xs badge-primary indicator-item"></span>
-            </div>
-          </button>
+        <div class="navbar-end ">
+            <button class="btn-primary bg-gray-500 flex gap-2">
+                <div>
+                <img src =./assets/coin.png>
+                </div>
+           <div>
+            <p> <span  id ="balance" > 5500 </span>BDT</p>
+        </button>
+           </div>
         </div>
       </div>
+      <section class="mx-auto w-1/4">
+        <div class="flex justify-center mb-6 mt-10 pt-5  ">
+         <button
+         id="donation-tab"
+         class="w-1/2 py-2 rounded-l-md focus:outline-none transition-colors duration-200 text-white font-semibold bg-[#B4F461]"
+       >
+      Donation
+       </button>
+       <button
+         id="history-tab"
+         class="w-1/2 py-2 rounded-r-md focus:outline-none transition-colors duration-200 text-gray-600 font-semibold"
+       >
+         History
+       </button>
+        </div>
+     </section>
     </header>
 <!--     main section  -->
-    <main>
+    <main class="bg-white ">
+        
+       
 
+    <!-- card section -->
+    <section id="donation" class=" mx-auto w-3/4 pt-8">
+        <div class="grid grid-cols-12 p-2 gap-2">
+            <div class="img col-span-6">
+           <img src ="./assets/noakhali.png " alt="naoakhali flood">
+            </div>
+           <div class="descrption col-span-6">
+            
+                <button class="flex justify-center gap-2 pt-4">
+                <img src="./assets/coin.png">
+                <P> <span id ="noakhali-collected">1000</span> BDT</P>
+            </button>
+            
+            
+            <h1 class="font-bold text-xl pt-4">Donate for Flood at Noakhali, Bangladesh</h1>
+            <p class ="pt-4 pb-4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+            <div class="flex flex-col gap-3">
+                <input class=" w-full p-4 " 
+                id ="donate-noakhali"
+                type="number"
+                placeholder = "write Donation Amount"
+                />
+                
+                <button 
+                id="calculate-noakhali"
+                class=" text-white px-4 py-4 rounded-md font-semibold text-sm transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-[#B4F461]"
+              >
+               Donate Now
+              </button>
+            
+            
+            </div>
+           </div>
+
+
+        </div>
+     </section>
+      
+     <!-- card -2 -->
+     <section class=" mx-auto w-3/4 pt-8">
+        <div class="grid grid-cols-12 p-2 gap-2">
+            <div class="img col-span-6">
+           <img src ="./assets/feni.png" alt="naoakhali flood">
+            </div>
+           <div class="descrption col-span-6">
+            
+                <button class="flex justify-center gap-2 pt-4">
+                <img src="./assets/coin.png">
+                <P> <span id ="feni-collected">1000</span> BDT</P>
+            </button>
+            
+            
+            <h1 class="font-bold text-xl pt-4">Donate for Flood Relief in Feni,Bangladesh</h1>
+            <p class ="pt-4 pb-4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+            <div class="flex flex-col gap-3">
+                <input class=" w-full p-4 " 
+                id ="donate-feni"
+                type="number"
+                placeholder = "write Donation Amount"
+                />
+                
+                <button 
+                id="calculate-feni"
+                class=" text-white px-4 py-4 rounded-md font-semibold text-sm transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-[#B4F461] "
+              >
+               Donate Now
+              </button>
+            
+            
+            </div>
+           </div>
+
+
+        </div>
+     </section>
+       
+
+    <!-- card 3 -->
+
+    <section class=" mx-auto w-3/4 pt-8">
+        <div class="grid grid-cols-12 p-2 gap-2">
+            <div class="img col-span-6">
+           <img src ="./assets/quota-protest.png" alt="naoakhali flood">
+            </div>
+           <div class="descrption col-span-6">
+            
+                <button class="flex justify-center gap-2 pt-4">
+                <img src="./assets/coin.png">
+                <P> <span id ="quota-collected">1000</span> BDT</P>
+            </button>
+            
+            
+            <h1 class="font-bold text-xl pt-4">Aid for Injured in the Quota Movement</h1>
+            <p class ="pt-4 pb-4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+            <div class="flex flex-col gap-3">
+                <input class=" w-full p-4 " 
+                id ="donate-quota"
+                type="number"
+                placeholder = "write Donation Amount"
+                />
+                
+                <button 
+                id="calculate-quota"
+                class=" text-white px-4 py-4 rounded-md font-semibold text-sm transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-[#B4F461]"
+              >
+               Donate Now
+              </button>
+            
+            
+            </div>
+           </div>
+
+
+          </div>
+         </section>
+
+         <!-- history section -->
+          <section>
+          <div id ="history-section"
+          class="p-4 rounded-lg border-white-200 bg-white hidden ">
+         <div id ="history-list"> </div>
+          </div>
+        </section>
     </main>
        <!-- footer section-->
     <footer>
 
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
