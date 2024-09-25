@@ -48,35 +48,41 @@
 
         <div class="bg-white p-6 rounded-lg shadow-lg mb-6 ">
             <h2 class="text-xl font-semibold">1. What is the Document Object Model (DOM)?</h2>
-            <p class="mt-4 text-gray-700">The Document Object Model (DOM) is a programming interface that allows scripts to dynamically access and update the content, structure, and style of a web document. It represents the HTML structure of a webpage as a tree of objects, which can be manipulated using JavaScript.</p>
+            <p class="mt-4 text-gray-700">The Document Object Model (DOM) is a programming interface that allows scripts and webs to dynamically access and update the content structure, and style of a web document. It represents the HTML structure of a webpage as a tree of objects, which can be manipulated using JavaScript.</p>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
             <h2 class="text-xl font-semibold">2. How do you select an element from the DOM?</h2>
             <p class="mt-4 text-gray-700">You can select elements from the DOM using various methods provided by JavaScript, such as:
+               
                 <ul class="list-disc ml-6 mt-2">
-                    <li><code>document.getElementById()</code> – selects an element by its ID.</li>
-                    <li><code>document.querySelector()</code> – selects the first matching element based on a CSS selector.</li>
-                    <li><code>document.querySelectorAll()</code> – selects all matching elements based on a CSS selector.</li>
-                    <li><code>document.getElementsByClassName()</code> – selects elements by their class name.</li>
+
+
+                    <li><code>document.getElementById()</code>  selects an element by its ID.</li>
+
+                <li><code> document.querySelector()</code> it will selects the first matched element based on a CSS selector.</li>
+                    <li><code> document.querySelectorAll()</code> it will selects all matching elements based on a CSS selector.</li>
+                    <li><code> document.getElementsByClassName()</code>  it will selects elements by their class name.</li>
                 </ul>
             </p>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
             <h2 class="text-xl font-semibold">3. What is event delegation in the context of the DOM, and why is it useful?</h2>
-            <p class="mt-4 text-gray-700">Event delegation is a technique where you attach a single event listener to a parent element that listens for events from its children. Instead of adding an event listener to individual child elements, the event is "delegated" to the parent. This is useful because it reduces the number of event listeners, improving performance and making it easier to handle dynamically added elements.</p>
+         <p class="mt-4 text-gray-700">Event delegation is a technique where you attach a single event listener to a parent element that listens for events from its children. Instead of adding an event listener to individual child elements, the event is "delegated" to the parent. This is useful because it reduces the number of event listeners.</p>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg">
+            
             <h2 class="text-xl font-semibold">4. How do you manipulate an element's attributes and styles using the DOM?</h2>
             <p class="mt-4 text-gray-700">To manipulate an element's attributes and styles, you can use JavaScript methods like:
-                <ul class="list-disc ml-6 mt-2">
-                    <li><code>element.setAttribute()</code> and <code>element.getAttribute()</code> – to set and get attributes.</li>
-                    <li><code>element.style.property</code> – to directly modify inline CSS styles. For example, <code>element.style.color = 'red';</code></li>
-                    <li><code>element.classList.add()</code> and <code>element.classList.remove()</code> – to add or remove CSS classes for style manipulation.</li>
+                
+            <ul class="list-disc ml-6 mt-2">
+                    <li><code>element.setAttribute()</code> and <code>element.getAttribute()</code>  to set and get attributes.</li>
+                    <li><code>element.style.property</code> to directly modify inline CSS styles. For example, <code>element.style.color = 'tellow';</code></li>
+                    <li><code> element.classList.add()</code> and <code> element.classList.remove()</code> to add or remove CSS classes for style manipulation.</li>
                 </ul>
-            </p>
+              </p>
         </div>
     </main>
     
