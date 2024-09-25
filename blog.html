@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- daisy UI CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+     <!-- Google Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+     <style>
+        .lexend{
+        font-family: 'Lexend',sans-serif;
+        }
+     </style>
+</head>
+   
+<body class="lexend  bg-white-200">
+
+    <header class =" sticky z-50 top-0  ">
+        <!-- navbar section -->
+        <div class="navbar   bg-[#F9F7F3] px-6 md:px-16 lg:px-28 p-8">
+         <div class="navbar-start">
+           <button class=" btn btn-success bg-[#B4F461]">Blog</button>
+         </div>
+         <div class="navbar-center flex justify-center gap-3">
+           <img src ="./assets/logo.png">
+           <h1 class="font-black text-2xl ">Donate Bangladesh</h1>
+         </div>
+         <div class="navbar-end ">
+             <button class="btn-primary bg-grey text-black flex gap-2">
+                 <div>
+                 <img src =./assets/coin.png>
+                 </div>
+            <div>
+             <p> <span  id ="balance" > 5500 </span>BDT</p>
+         </button>
+            </div>
+         </div>
+       </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto mt-12"></main>
+        <h1 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-semibold">1. What is the Document Object Model (DOM)?</h2>
+            <p class="mt-4 text-gray-700">The Document Object Model (DOM) is a programming interface that allows scripts to dynamically access and update the content, structure, and style of a web document. It represents the HTML structure of a webpage as a tree of objects, which can be manipulated using JavaScript.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-semibold">2. How do you select an element from the DOM?</h2>
+            <p class="mt-4 text-gray-700">You can select elements from the DOM using various methods provided by JavaScript, such as:
+                <ul class="list-disc ml-6 mt-2">
+                    <li><code>document.getElementById()</code> – selects an element by its ID.</li>
+                    <li><code>document.querySelector()</code> – selects the first matching element based on a CSS selector.</li>
+                    <li><code>document.querySelectorAll()</code> – selects all matching elements based on a CSS selector.</li>
+                    <li><code>document.getElementsByClassName()</code> – selects elements by their class name.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-semibold">3. What is event delegation in the context of the DOM, and why is it useful?</h2>
+            <p class="mt-4 text-gray-700">Event delegation is a technique where you attach a single event listener to a parent element that listens for events from its children. Instead of adding an event listener to individual child elements, the event is "delegated" to the parent. This is useful because it reduces the number of event listeners, improving performance and making it easier to handle dynamically added elements.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-semibold">4. How do you manipulate an element's attributes and styles using the DOM?</h2>
+            <p class="mt-4 text-gray-700">To manipulate an element's attributes and styles, you can use JavaScript methods like:
+                <ul class="list-disc ml-6 mt-2">
+                    <li><code>element.setAttribute()</code> and <code>element.getAttribute()</code> – to set and get attributes.</li>
+                    <li><code>element.style.property</code> – to directly modify inline CSS styles. For example, <code>element.style.color = 'red';</code></li>
+                    <li><code>element.classList.add()</code> and <code>element.classList.remove()</code> – to add or remove CSS classes for style manipulation.</li>
+                </ul>
+            </p>
+        </div>
+    </main>
+    
+</body>
+</html>
