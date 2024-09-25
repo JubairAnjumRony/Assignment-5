@@ -4,6 +4,15 @@ function convertNum(id){
 function convertNumInput(id){
     return parseFloat(document.getElementById(id).value);
 }
+function showError(id){
+    document.getElementById(id).classList.remove("hidden");
+   
+}
+
+
+function formatCurrency(amout){
+    return  `${amount.toFIxed(2)}`;
+}
 
 // add eventlistener for calculate card-1
 
@@ -18,21 +27,26 @@ calculateButton.addEventListener("click",function(){
 
     const  remainingbalance =mainbalance-donatenoakhali;
      const newcollectionnoakhali =collectionnoakhali+donatenoakhali;
-     console.log(remainingbalance);
-     console.log(newcollectionnoakhali);
+    //  console.log(remainingbalance);
+    //  console.log(newcollectionnoakhali);
     const a= document.getElementById("noakhali-collected");
     a.innerText= newcollectionnoakhali.toFixed(0);
-
+    
     const b =document.getElementById("balance");
     b.innerText = remainingbalance.toFixed(0);
+    if(donatenoakhali <=0 || isNaN(donatenoakhali)){
+       document.getElementById("income-error").classList.remove("hidden");
+       return;
+     
+    }
 
 // history of donation
     const historyItem =document.createElement("div");
-historyItem.className ="bg-white p-5 rounded-md border-l-2 ";
+historyItem.className ="bg-white p-5 rounded-md border-l-2 text-center ";
 
 historyItem.innerHTML =`
                    <p class="text-xl text-black-500"> ${donatenoakhali.toFixed(2)} Taka is donated for Flood Relief at Noakhali, Bangladesh.</P>
-                 <br>
+                
                    <p class="text-xl text-gray-500"> Date: ${new Date().toString()}</p>
    
    
@@ -54,29 +68,33 @@ calculateButtonf.addEventListener("click",function(){
 
     const  remainingbalance =mainbalance-donatefeni;
      const newcollectionfeni =collectionfeni+donatefeni;
-     console.log(remainingbalance);
-     console.log(newcollectionfeni);
+    //  console.log(remainingbalance);
+    //  console.log(newcollectionfeni);
     const c= document.getElementById("feni-collected");
     c.innerText= newcollectionfeni.toFixed(0);
 
     const d =document.getElementById("balance");
     d.innerText = remainingbalance.toFixed(0);
+    if(donatefeni <=0 || isNaN(donatefeni || donatefeni>mainbalance)){
+        document.getElementById("income-error-2").classList.remove("hidden");
+        return;
+      
+     }
 
     // history of donation
     const historyItem =document.createElement("div");
-historyItem.className ="bg-white  rounded-md border-l-2 text-center";
+historyItem.className ="bg-white  rounded-md border-l-2 text-center mt-3";
 
 historyItem.innerHTML =`
                    <p class="text-xl text-black-500"> ${donatefeni.toFixed(2)} Taka is donated for Flood Relief at Feni, Bangladesh.</P>
-                   
-                   <br>
+        
                    <p class="text-xl text-gray-500"> Date: ${new Date().toString()}</p>
    
    
 `;
 const historyContainer = document.getElementById("history-list");
 historyContainer.insertBefore(historyItem,historyContainer.firstChild);
-ocument.getElementById("my_modal").showModal();
+document.getElementById("my_modal").showModal();
 });
 
 // add Eventlistener for card 3
@@ -99,21 +117,26 @@ calculateButtonq.addEventListener("click",function(){
 
     const d =document.getElementById("balance");
     d.innerText = remainingbalance.toFixed(0);
+    if(donatequota <=0 || isNaN(donatequota)){
+        document.getElementById("income-error-3").classList.remove("hidden");
+        return;
+      
+     }
    
     // history of donation
     const historyItem =document.createElement("div");
-historyItem.className ="bg-white   justify-center px-10 rounded-md border-l-2 gap-3 ";
+historyItem.className ="bg-white   text-center px-10 rounded-md border-l-2 gap-3 ";
 
 historyItem.innerHTML =`
-                   <p class="text-xl text-black-500"> ${donatequota.toFixed(2)} Taka is donated for Flood Relief at Noakhali, Bangladesh.</P>
-                   <br>
+                   <p class="text-xl text-black-500"> ${formatCurrency(donatequota)} Taka is donated for Aid for Injured in Quota Movement.</P>
+                   
                    <p class="text-xl text-gray-500"> Date: ${new Date().toString()}</p>
    
    
 `;
 const historyContainer = document.getElementById("history-list");
 historyContainer.insertBefore(historyItem,historyContainer.firstChild);
-ocument.getElementById("my_modal").showModal();
+document.getElementById("my_modal").showModal();
 
 
 });
